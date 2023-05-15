@@ -1,6 +1,6 @@
 <template>
-    <div class="order">
-        <h2>order2</h2>
+    <div class="front">
+        <h2>front2222</h2>
     </div>
 </template>
 

@@ -16,11 +16,15 @@ const router = createRouter({
     routes:[
         {
             path: "/",
-            redirect: "/home"
+            redirect: "/front"
         },
+        // {
+        //     path: "/home",
+        //     component: () => import("@/views/home/home.vue")
+        // },
         {
-            path: "/home",
-            component: () => import("@/views/home/home.vue")
+            path: "/front",
+            component: () => import("@/views/front/front.vue")
         },
         {
             path: "/order",

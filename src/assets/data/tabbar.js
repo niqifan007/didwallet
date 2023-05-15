@@ -10,26 +10,32 @@
  */
 
     const tabbarData = [
+        // {
+        //     text: "身份中心",
+        //     image: "tabbar/tab_home.png",
+        //     imageActive: "tabbar/tab_home_active.png",
+        //     path: "/home"
+        // },
         {
-            text: "首页",
+            text: "身份中心",
             image: "tabbar/tab_home.png",
             imageActive: "tabbar/tab_home_active.png",
-            path: "/home"
+            path: "/front"
         },
         {
-            text: "收藏",
+            text: "注册身份",
             image: "tabbar/tab_favor.png",
             imageActive: "tabbar/tab_favor_active.png",
             path: "/favor"
         },
         {
-            text: "订单",
+            text: "验证身份",
             image: "tabbar/tab_order.png",
             imageActive: "tabbar/tab_order_active.png",
             path: "/order"
         },
         {
-            text: "消息",
+            text: "个人中心",
             image: "tabbar/tab_message.png",
             imageActive: "tabbar/tab_message.png",
             path: "/message"

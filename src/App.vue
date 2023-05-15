@@ -2,7 +2,7 @@
  * @Author: waka 923325372@qq.com
  * @Date: 2022-10-07 19:19:17
  * @LastEditors: waka 923325372@qq.com
- * @LastEditTime: 2022-10-11 15:16:52
+ * @LastEditTime: 2022-10-24 15:42:44
  * @FilePath: \trip-demo\src\App.vue
  * @Description:  
  * 
