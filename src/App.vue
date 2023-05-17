@@ -11,7 +11,7 @@
 <template>
     <div class="app">
         <router-view v-slot="props">
-            <keep-alive include="home">
+            <keep-alive include="front">
             <component :is="props.Component"></component>
             </keep-alive>
         </router-view>
@@ -33,7 +33,14 @@ const route = useRoute()
 </script>
 
 <style lang="less" scoped>
-
+#app {
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+#app2 {
+  background-color: #f2f2f2;
+  height: 100vh;
+}
 
 
 </style>
