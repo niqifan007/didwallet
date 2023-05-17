@@ -8,6 +8,12 @@
  * 
  * Copyright (c) 2022 by waka 923325372@qq.com, All Rights Reserved. 
  */
+import login from "@/views/favor/login.vue";
+import register from "@/views/favor/register.vue";
+import successID from "@/views/favor/success/successID.vue";
+import successStudent from "@/views/favor/success/successStudent.vue";
+import successVc from "@/views/favor/success/successVc.vue";
+import successCompany from "@/views/favor/success/successCompany.vue";
 import { createRouter,createWebHashHistory  } from "vue-router";
 
 const router = createRouter({
@@ -37,6 +43,30 @@ const router = createRouter({
         {
             path: "/favor",
             component: () => import("@/views/favor/favor.vue")
+        },
+        {
+            path: "/login",
+            component: login
+        },
+        {
+            path: "/register",
+            component: register
+        },
+        {
+            path: "/successID",
+            component: successID
+        },
+        {
+            path: "/successStudent",
+            component: successStudent
+        },
+        {
+            path: "/successVc",
+            component: successVc
+        },
+        {
+            path: "/successCompany",
+            component: successCompany
         },
         {
             path: "/city",

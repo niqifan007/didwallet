@@ -13,10 +13,33 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import pinia from './stores'
+import Vant from 'vant';
+import axios from 'axios'
 
 import "normalize.css"
+import 'vant/lib/index.css'
 import "./assets/css/index.css"
 
+axios.defaults.baseURL = 'http://localhost:8081' // 设置请求的基础URL
+axios.defaults.withCredentials = true // 允许携带cookie
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
+// 发送请求时将token值设置到请求头中
+axios.interceptors.request.use(
+    config => {
+        var user = JSON.parse(localStorage.getItem("user"))
+        var token = user ? user.token : null;
+      if (token) {
+        config.headers['token'] = token
+      }
+      return config
+    },
+    error => {
+      return Promise.reject(error)
+    }
+  )
 
 
-createApp(App).use(router).use(pinia).mount('#app')
+const app = createApp(App)
+
+app.config.globalProperties.$axios = axios // 把 axios 实例挂载到全局
+app.use(router).use(pinia).use(Vant).mount('#app')
