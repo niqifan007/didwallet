@@ -15,6 +15,8 @@ import successStudent from "@/views/favor/success/successStudent.vue";
 import successVc from "@/views/favor/success/successVc.vue";
 import successCompany from "@/views/favor/success/successCompany.vue";
 import { createRouter,createWebHashHistory  } from "vue-router";
+import jwtDecode from "jwt-decode";
+
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -90,5 +92,27 @@ const router = createRouter({
 
     ]
 })
+
+// router.beforeEach((to, from, next) => {
+//     var token = JSON.parse(localStorage.getItem("user"))
+//     // console.log(token.token);
+//     if (token.token && !isTokenExpired(token.token)) {
+//       // token 未过期，可以直接进入
+//       next()
+//     } else {
+//       // token 过期了，需要重新登录
+//       // 重新登录的操作可以根据具体情况来实现
+//       // 更新本地的 token
+//     //   localStorage.setItem('user', newToken)
+//       next('/login')
+//     }
+//   })
+  
+//   function isTokenExpired(token) {
+//     const decodedToken = jwtDecode(token)
+//     const now = Date.now() / 1000
+//     return now > decodedToken.exp
+//   }
+  
 
 export default router

@@ -88,6 +88,11 @@
                 Toast.success(res.data);
                 this.$router.replace("/front");
             })
+            console.log(this.name)
+            console.log(this.timeValue)
+            console.log(this.country)
+            console.log(this.area)
+            
         },
     },
     mounted() {

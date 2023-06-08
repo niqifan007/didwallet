@@ -35,7 +35,7 @@ const route = useRoute()
 <style lang="less" scoped>
 #app {
   background-color: #f2f2f2;
-  height: 100vh;
+  min-height: 100vh;
 }
 #app2 {
   background-color: #f2f2f2;
