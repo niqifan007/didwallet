@@ -15,6 +15,7 @@ import router from './router'
 import pinia from './stores'
 import Vant from 'vant';
 import axios from 'axios'
+import {Dialog} from "vant";
 
 import "normalize.css"
 import 'vant/lib/index.css'
@@ -42,4 +43,4 @@ axios.interceptors.request.use(
 const app = createApp(App)
 
 app.config.globalProperties.$axios = axios // 把 axios 实例挂载到全局
-app.use(router).use(pinia).use(Vant).mount('#app')
+app.use(router).use(pinia).use(Vant).use(Dialog).mount('#app')
